@@ -12,4 +12,12 @@ class AlbumRepositoryImpl (private var apiservice: AlbumServices): AlbumReposito
             listAlbum
         }
     }
+
+    override suspend fun fetchAlbumById(idAlbumServices: Long): AlbumResponse {
+       return withContext(Dispatchers.IO) {
+
+       val albumDetail = apiservice.getAlbumById(idAlbumServices)
+           albumDetail
+       }
+    }
 }

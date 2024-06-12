@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/white"
+tools:context=".presentation.ui.listdetail.MainActivityDetail">
+
+
+<ImageView
+    android:id="@+id/backgroundImageViewDetail"
+    android:layout_width="414dp"
+    android:layout_height="242dp"
+    android:layout_gravity="fill"
+    android:adjustViewBounds="true"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="1.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.001"
+    tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album"
+        android:textColor="@color/azulalkeosc"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.346" />
+
+
+
+<TextView
+    android:id="@+id/urlIdLongDetail"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SandBox - Action"
+    android:textColor="@color/grisAlkeosc"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.498"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.45" />
+
+
+    <TextView
+    android:id="@+id/longIdDetail"
+    android:layout_width="90dp"
+    android:layout_height="71dp"
+    android:layout_marginBottom="112dp"
+    android:text="4.8"
+    android:textColor="@color/azulalkeosc"
+
+    android:textSize="60sp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.087"
+    app:layout_constraintStart_toStartOf="parent" />
+
+
+    <Button
+        android:id="@+id/sendEmail"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/boton_redondeado"
+        android:text="lo quiero"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/thumbnailurlDetail"
+        android:layout_width="167dp"
+        android:layout_height="111dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/backgroundImageViewDetail"
+        app:layout_constraintVertical_bias="0.622"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

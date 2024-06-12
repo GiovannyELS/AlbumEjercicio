@@ -6,4 +6,6 @@ interface AlbumRepository {
 
     suspend fun fetchAlbum(): MutableList<AlbumResponse>
 
+    suspend fun fetchAlbumById(idAlbumServices: Long) : AlbumResponse
+
 }

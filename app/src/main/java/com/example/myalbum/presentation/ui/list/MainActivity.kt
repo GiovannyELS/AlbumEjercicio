@@ -1,19 +1,21 @@
-package com.example.myalbum.presentation.ui
+package com.example.myalbum.presentation.ui.list
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myalbum.R
 import com.example.myalbum.data.network.api.AlbumServices
 import com.example.myalbum.data.network.retrofit.RetrofitHelper
 import com.example.myalbum.data.repository.AlbumRepositoryImpl
 import com.example.myalbum.databinding.ActivityMainBinding
 import com.example.myalbum.domain.AlbumUseCase
-import com.example.myalbum.presentation.viewmodel.AlbumViewModel
-import com.example.myalbum.presentation.viewmodel.ViewModelFactory
+import com.example.myalbum.presentation.ui.listdetail.MainActivityDetail
+import com.example.myalbum.presentation.viewmodel.list.AlbumViewModel
+import com.example.myalbum.presentation.viewmodel.list.ViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,8 +39,21 @@ class MainActivity : AppCompatActivity() {
 
 
         viewModel.albumLV.observe(this) {
-            Log.i("GAMES", "games")
             adapterAlbum.albumes = it.toMutableList()
         }
+
+        adapterAlbum.onItemClickListener={album ->
+            val idAlbum = album.id
+            val nombreAlbum = album.title
+
+            goToAlbumDetailPage(idAlbum)
+
+        }
+    }
+    private fun goToAlbumDetailPage(idAlbum:Long) {
+        val intent = Intent(this, MainActivityDetail::class.java).apply {
+            putExtra("ID_ALBUM", idAlbum)
+        }
+        startActivity(intent)
     }
 }

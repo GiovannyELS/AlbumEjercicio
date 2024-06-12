@@ -1,4 +1,4 @@
-package com.example.myalbum.presentation.viewmodel
+package com.example.myalbum.presentation.viewmodel.list
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
